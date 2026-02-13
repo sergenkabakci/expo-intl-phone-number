@@ -2,6 +2,14 @@
 
 A fully customizable, strictly typed, and performant international phone input component for React Native (Expo compatible).
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/1.jpeg" width="250" alt="Phone Input" />
+  <img src="docs/2.jpeg" width="250" alt="Dropdown Picker" />
+  <img src="docs/3.jpeg" width="250" alt="Modal Picker" />
+</p>
+
 ## Features
 
 - 📱 **Strict TypeScript** support.

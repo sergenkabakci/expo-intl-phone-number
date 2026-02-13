@@ -30,3 +30,4 @@ tsconfig.tsbuildinfo
 # Build output
 lib/
 .claude/
+example/
