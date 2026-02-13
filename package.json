@@ -1,0 +1,155 @@
+{
+  "name": "expo-intl-phone-number",
+  "version": "0.1.0",
+  "description": "A fully customizable, strictly typed, and performant international phone input for React Native (Expo).",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "src/index.ts",
+  "types": "lib/typescript/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "src",
+    "lib",
+    "!lib/typescript/example",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "scripts": {
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli lib",
+    "prepare": "bob build",
+    "release": "release-it",
+    "example": "expo start"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "phone-input",
+    "international-phone-input",
+    "expo",
+    "libphonenumber",
+    "flash-list"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergenkabakci/expo-intl-phone-number.git"
+  },
+  "author": "Sergen Kabakci <sergenkabakci@gmail.com> (https://github.com/sergenkabakci)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergenkabakci/expo-intl-phone-number/issues"
+  },
+  "homepage": "https://github.com/sergenkabakci/expo-intl-phone-number#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.4.1",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@react-native/babel-preset": "^0.84.0",
+    "@release-it/conventional-changelog": "^10.0.5",
+    "@shopify/flash-list": "^1.4.0",
+    "@testing-library/react-native": "^13.3.3",
+    "@types/jest": "^30.0.0",
+    "@types/react": "~19.2.14",
+    "commitlint": "^20.4.1",
+    "del-cli": "^7.0.0",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "jest": "^30.2.0",
+    "libphonenumber-js": "^1.12.36",
+    "prettier": "^3.8.1",
+    "react": "19.2.4",
+    "react-native": "0.84.0",
+    "react-native-builder-bob": "^0.40.18",
+    "release-it": "^19.2.4",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@shopify/flash-list": ">=1.4.0",
+    "libphonenumber-js": ">=1.10.0",
+    "react": ">=17.0.0",
+    "react-native": ">=0.68.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
+  }
+}

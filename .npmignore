@@ -1,0 +1,23 @@
+# Exclude everything by default
+*
+
+# Include source
+!src
+!src/**
+
+# Include dist
+!lib
+!lib/**
+
+# Include assets
+!LICENSE
+!README.md
+!package.json
+
+# Exclude tests
+__tests__
+jest.setup.js
+
+# Exclude examples
+example
+App.tsx
