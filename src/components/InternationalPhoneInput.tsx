@@ -53,7 +53,6 @@ export interface InternationalPhoneInputProps {
 
     // Styling Overrides
     containerStyle?: StyleProp<ViewStyle>;
-    modalOverlayStyle?: StyleProp<ViewStyle>;
     modalContentStyle?: StyleProp<ViewStyle>;
 
     // Flag Section
@@ -93,7 +92,6 @@ export const InternationalPhoneInput = React.memo(forwardRef<InternationalPhoneI
         modalHeight = 300,
         modalBackground = '#FFFFFF',
         containerStyle,
-        modalOverlayStyle,
         modalContentStyle,
         flagContainerStyle,
         flagStyle,
