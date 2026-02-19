@@ -326,7 +326,7 @@ export const InternationalPhoneInput = React.memo(forwardRef<InternationalPhoneI
         <View style={[
             styles.container,
             containerStyle,
-            error ? styles.borderError : styles.borderNormal,
+            error ? styles.borderError : null,
             disabled && styles.disabled
         ]}>
 
@@ -446,8 +446,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         alignItems: 'center',
         zIndex: 1,
-    },
-    borderNormal: {
         borderColor: '#D1D5DB',
     },
     borderError: {

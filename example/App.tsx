@@ -48,7 +48,6 @@ export default function App() {
                             defaultCountry="TR"
                             placeholder="Enter phone..."
                             searchPlaceholder="Search country..."
-                            initialCountry={selectedCountry}
 
                         />
 
